@@ -1,0 +1,6 @@
+classes= 1
+train  = /mnt/data1/yanghuiyu/project/object_detect/yolov4/my_data/wider_landmark_yolo_train.txt
+valid  = /mnt/data1/yanghuiyu/project/object_detect/yolov4/my_data/wider_landmark_yolo_val.txt
+
+names =  ./data/face.names
+backup = ./backup
