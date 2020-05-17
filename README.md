@@ -12,3 +12,8 @@
 
 ## 测试
 <p align="center"><img src="test_imgs/output/selfie.jpg"\></p>
+
+
+
+## References
+- [darknet](https://github.com/AlexeyAB/darknet)
