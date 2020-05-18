@@ -10,8 +10,34 @@
 4. 使用yolo_landmark.py进行测试，更换里面的模型配置文件即可
 
 
+## 精度
+### Widerface测试
+
+ - 在wider face val精度（单尺度输入分辨率：**320*240**）
+ 
+ 方法|Easy|Medium|Hard
+------|--------|----------|--------
+libfacedetection v1（caffe）|0.65 |0.5       |0.233
+libfacedetection v2（caffe）|0.714 |0.585       |0.306
+Retinaface-Mobilenet-0.25(Mxnet)  |0.745|0.553|0.232
+mbv2_yolov3_face(our)  |**0.84**|**0.79**|**0.41**
+- 在wider face val精度（单尺度输入分辨率：**640*480**） 
+
+方法|Easy|Medium|Hard 
+------|--------|----------|--------
+libfacedetection v1（caffe）|0.741 |0.683       |0.421
+libfacedetection v2（caffe）|0.773 |0.718       |0.485
+Retinaface-Mobilenet-0.25(our)  |**0.873**|0.836|0.638
+mbv2_yolov3_face(our)  |0.86|**0.85**|**0.70**
+
+ps: 测试的时候,长边为320 或者 640 ,图像等比例缩放,yolo未作缩放.
+
 ## 测试
 <p align="center"><img src="test_imgs/output/selfie.jpg"\></p>
+
+
+
+
 
 
 
