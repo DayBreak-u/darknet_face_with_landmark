@@ -27,7 +27,7 @@ mbv2_yolov3_face(our)  |**0.84**|**0.79**|**0.41**
 ------|--------|----------|--------
 libfacedetection v1（caffe）|0.741 |0.683       |0.421
 libfacedetection v2（caffe）|0.773 |0.718       |0.485
-Retinaface-Mobilenet-0.25(Mxnet)  |**0.873**|0.836|0.638
+Retinaface-Mobilenet-0.25(Mxnet)  |**0.879**|0.807|0.481
 mbv2_yolov3_face(our)  |0.866|**0.848**|**0.718**
 
 ps: 测试的时候,长边为320 或者 640 ,图像等比例缩放,yolo未作缩放.
