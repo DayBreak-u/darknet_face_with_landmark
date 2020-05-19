@@ -31,6 +31,7 @@ void draw_label(image a, int r, int c, image label, const float *rgb);
 void write_label(image a, int r, int c, image *characters, char *string, float *rgb);
 void draw_detections(image im, int num, float thresh, box *boxes, float **probs, char **names, image **labels, int classes);
 void draw_detections_v3(image im, detection *dets, int num, float thresh, char **names, image **alphabet, int classes, int ext_output);
+void draw_detections_v4(image im, detection *dets, int num, float thresh, char **names, image **alphabet, int classes, int ext_output);
 image image_distance(image a, image b);
 void scale_image(image m, float s);
 // image crop_image(image im, int dx, int dy, int w, int h);
