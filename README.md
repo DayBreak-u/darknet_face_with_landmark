@@ -7,7 +7,11 @@
 1. git clone https://github.com/ouyanghuiyu/darknet_face_with_landmark.git
 2. 使用scripts/retinaface2yololandmark.py脚本将retinaface的标记文件转为yolo的格式使用
 3. 其他编译训练都和原版darknet相同
-4. 使用yolo_landmark.py进行测试，更换里面的模型配置文件即可
+4. 测试
+```
+    ./darknet detector test ./data/face.data  ./cfg/mbv2_yolov3_face.cfg  ./models/mbv2_yolov3_face_final.weights  ./test_imgs/input/selfie.jpg  -dont_show
+```
+或者使用yolo_landmark.py进行测试，更换里面的模型配置文件即可
 
 
 ## 精度
