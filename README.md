@@ -1,5 +1,5 @@
 # darknet_face_with_landmark
-### 借鉴AlexeyAB大神的 [darknet](https://github.com/AlexeyAB/darknet) 做适量修改，用于人脸检测以及关键点检测
+### 借鉴AlexeyAB大神的 [darknet](https://github.com/AlexeyAB/darknet) 做适量修改，用于人脸检测以及关键点检测,支持ncnn推理
 
 
 ## Installation
@@ -38,9 +38,6 @@ ps: 测试的时候,长边为320 或者 640 ,图像等比例缩放,yolo未作缩
 
 ## 测试
 <p align="center"><img src="test_imgs/selfie.jpg"\></p>
-
-
-
 
 
 
