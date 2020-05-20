@@ -75,8 +75,6 @@ cv::Mat resize_img(cv::Mat src,const int long_size)
     }
     // std::cout<<"缩放尺寸 (" << w << ", "<<h<<")"<<std::endl;
     cv::Mat result;
-    w = 2048;
-    h = 2048;
 
     cv::resize(src, result, cv::Size(w, h));
     return result;
