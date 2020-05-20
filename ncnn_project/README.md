@@ -14,6 +14,4 @@ make
 
 
 # 示例
-<img width="500" height="300" src="https://github.com/ouyanghuiyu/chineseocr_lite/blob/master/ncnn_project/ocr/res_imgs/res_1.jpg"/>
-
-<p align="center"><img src="./test.png"\></p>
+<p align="center"><img src="./ncnn_project/test.png"\></p>
