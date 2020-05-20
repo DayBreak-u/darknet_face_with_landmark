@@ -14,4 +14,4 @@ make
 
 
 # 示例
-<p align="center"><img src="test.png"\></p>
+<p align="center"><img src="ncnn_project/test.png"\></p>
