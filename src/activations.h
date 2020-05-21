@@ -58,6 +58,8 @@ static inline float logistic_activate(float x){return 1.f/(1.f + expf(-x));}
 static inline float loggy_activate(float x){return 2.f/(1.f + expf(-x)) - 1;}
 static inline float relu_activate(float x){return x*(x>0);}
 static inline float relu6_activate(float x) { return min_val_cmp(max_val_cmp(x, 0), 6); }
+static inline float hswish_activate(float x) { return min_val_cmp(max_val_cmp(x+3, 0), 6)*x /6.f; }
+static inline float hsigmode_activate(float x) { return min_val_cmp(max_val_cmp(x+3, 0), 6) /6.f; }
 static inline float elu_activate(float x){return (x >= 0)*x + (x < 0)*(expf(x)-1);}
 static inline float selu_activate(float x) { return (x >= 0)*1.0507f*x + (x < 0)*1.0507f*1.6732f*(expf(x) - 1); }
 static inline float relie_activate(float x){return (x>0) ? x : .01f*x;}
@@ -107,6 +109,7 @@ static inline float stair_gradient(float x)
     if (floor(x) == x) return 0;
     return 1.0f;
 }
+
 static inline float relu_gradient(float x){return (x>0);}
 static inline float relu6_gradient(float x) { return (x > 0 && x < 6); }
 static inline float elu_gradient(float x){return (x >= 0) + (x < 0)*(x + 1);}
@@ -115,6 +118,18 @@ static inline float relie_gradient(float x){return (x>0) ? 1 : .01f;}
 static inline float ramp_gradient(float x){return (x>0)+.1f;}
 static inline float leaky_gradient(float x){return (x>0) ? 1 : .1f;}
 static inline float tanh_gradient(float x){return 1-x*x;}
+//add
+static inline float hswish_gradient(float x)
+{
+    if (x + 3 > 0 && x +3 < 6) return x / 3.f;
+    else return 0 ;
+}
+static inline float hsigmode_gradient(float x)
+{
+    if (x + 3 > 0 && x +3 < 6) return 1 / 6.f ;
+    else return 0 ;
+}
+
 
 static inline float sech(float x) { return 2 / (expf(x) + expf(-x)); }
 static inline float gelu_gradient(float x) {

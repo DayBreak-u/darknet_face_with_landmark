@@ -454,6 +454,7 @@ layer parse_yolo(list *options, size_params params)
     l.iou_thresh = option_find_float_quiet(options, "iou_thresh", 1); // recommended to use iou_thresh=0.213 in [yolo]
     l.random = option_find_float_quiet(options, "random", 0);
 
+
     char *map_file = option_find_str(options, "map", 0);
     if (map_file) l.map = read_map(map_file);
 

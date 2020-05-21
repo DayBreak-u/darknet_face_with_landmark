@@ -56,6 +56,8 @@ ACTIVATION get_activation(char *s)
     if (strcmp(s, "loggy")==0) return LOGGY;
     if (strcmp(s, "relu")==0) return RELU;
     if (strcmp(s, "relu6") == 0) return RELU6;
+    if (strcmp(s, "hswish") == 0) return HSWISH;
+    if (strcmp(s, "hsigmode") == 0) return HSIGMODE;
     if (strcmp(s, "elu")==0) return ELU;
     if (strcmp(s, "selu") == 0) return SELU;
     if (strcmp(s, "gelu") == 0) return GELU;
@@ -295,6 +297,12 @@ float gradient(float x, ACTIVATION a)
             return relu_gradient(x);
         case RELU6:
             return relu6_gradient(x);
+        //add
+        case HSWISH:
+            return hswish_gradient(x);
+        case HSIGMODE:
+            return hsigmode_gradient(x);
+
         case NORM_CHAN:
             //return relu_gradient(x);
         case NORM_CHAN_SOFTMAX_MAXVAL:

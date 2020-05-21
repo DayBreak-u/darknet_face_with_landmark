@@ -299,7 +299,7 @@ ious delta_yolo_box(box truth, float *x, float *biases, int n, int index, int i,
 //    float land_scale = 1.0 ;
     float land_scale = strid_w / 8.0 ;
     // &&  truth.w*w > 8 && truth.h*h > 8
-    if (truth.lx1 != -1 )
+    if (truth.lx1 != -1 && truth.w*w > 12 && truth.h*h > 12 )
     {
 
         delta[index + 4 * stride]  += scale * (tlx1 - x[index + 4 * stride])  * land_scale;
@@ -745,7 +745,7 @@ void forward_yolo_layer(const layer l, network_state state)
     }
 
     // float landmark_loss = pow(mag_array(no_iou_class_loss_delta, l.outputs * l.batch), 2);
-    float landmark_loss = wing_loss(no_iou_class_loss_delta, l.outputs * l.batch) * 0.1 ; // wing loss
+    float landmark_loss = wing_loss(no_iou_class_loss_delta, l.outputs * l.batch) * 0.05 ; // wing loss
     free(no_iou_class_loss_delta);
 
     float* no_land_class_loss_delta = (float *)calloc(l.batch * l.outputs, sizeof(float));
