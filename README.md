@@ -1,6 +1,9 @@
 # darknet_face_with_landmark
 ### 借鉴AlexeyAB大神的 [darknet](https://github.com/AlexeyAB/darknet) 做适量修改，用于人脸检测以及关键点检测,支持ncnn推理
 
+### 实现的功能
+- 添加关键点检测分支，使用wing loss
+- 添加 hswish,hsigmode 激活函数
 
 ## Installation
 ##### Clone and install
