@@ -1,5 +1,5 @@
 # darknet_face_with_landmark
-## 更新 troch版本：https://github.com/ouyanghuiyu/yolo-face-with-landmark
+## 更新 torch版本：https://github.com/ouyanghuiyu/yolo-face-with-landmark
 
 ### 借鉴AlexeyAB大神的 [darknet](https://github.com/AlexeyAB/darknet) 做适量修改，用于人脸检测以及关键点检测,支持ncnn推理
 
